@@ -4,6 +4,6 @@ In the Jupyter notebook (.ipynb) in this repository, we provide an alternative t
 
 The overall approach can be summarized as follows:
 
-We build a time series model based on historical asset returns, such that the residual errors of the model are independently and identically distributed (i.i.d.).
-We use the model and the residual errors to generate bootstrapped predictions, i.e. predicting the next return value using the time series model and randomly sampling from the i.i.d. residual errors. In partciluar, making such predictions repetitively, we can generate a number of sample paths. The cumulative returns of each sample path can then be combined into an empirical distribution of predicted returns.
-We formulate a mixed integer linear programming (MILP) problem that uses the empirical distribution of predicted returns to find the asset allocation that maximizes the mean of this distribution subject to one or several VaR constraints.
+1. We build a time series model based on historical asset returns, such that the residual errors of the model are independently and identically distributed (i.i.d.).
+2. We use the model and the residual errors to generate bootstrapped predictions, i.e. predicting the next return value using the time series model and randomly sampling from the i.i.d. residual errors. In particular, making such predictions repetitively, we can generate a number of sample paths. The cumulative returns of each sample path can then be combined into an empirical distribution of predicted returns.
+3. We formulate a mixed integer linear programming (MILP) problem that uses the empirical distribution of predicted returns to find the asset allocation that maximizes the mean of this distribution subject to one or several VaR constraints.
